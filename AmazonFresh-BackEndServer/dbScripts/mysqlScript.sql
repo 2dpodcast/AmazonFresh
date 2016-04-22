@@ -29,3 +29,17 @@ CREATE TABLE `amazonfresh`.`customers` (
   `hash` VARCHAR(1000) NOT NULL,
   `salt` LONGBLOB NOT NULL,
   PRIMARY KEY (`cust_id`));
+
+  CREATE TABLE amazonfresh.trip
+  (
+      _id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      trip_id varchar(10),
+      pickup_location_latitude double,
+      pickup_location_longitude double,
+      dropoff_location_latitude double,
+      dropoff_location_longitude double,
+  	  Date_Time datetime,
+      cutomer_id varchar(9),
+      driver_id varchar(9),
+      truck_id varchar(9)
+  );
